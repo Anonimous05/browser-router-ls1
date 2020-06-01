@@ -1,0 +1,92 @@
+.head {
+    height: 50px;
+    background: #1a2afa;
+    position: fixed;
+    width: 100%;
+}
+.main-nav ul {
+    list-style: none;
+    margin: 0px;
+    float: left;
+    padding-top: 12px;
+}
+.main-nav a {
+    text-decoration: none;
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+    padding-left: 200px;
+}
+.main-nav a:hover {
+    color: #282c34;
+    transition: all 0.2s;
+}
+
+.add_button {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    color: white;
+    font-family: monospace;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left:68%;
+}
+.add_button:hover {
+    background: white;
+    color: #1a2afa;
+    transition: all 0.5s;
+}
+.products {
+    padding-top: 50px;
+    display: flex;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    flex-wrap: wrap;
+}
+.block_img {
+    height: 250px;
+}
+.block {
+    border-top: 17px solid #222c84;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 280px;
+    margin-left: 40px;
+    border-bottom: 5px solid #282c34;
+    margin-top: 40px;
+}
+.block img {
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 220px;
+}
+.name , .price{
+    text-align: center;
+    font-family: monospace;
+    text-transform: capitalize;
+    font-size: 20px;
+    margin-right: 20px;
+}
+.edit {
+    background: #282c34;
+    color: white;
+    text-decoration: none;
+    font-family: monospace;
+    will-change: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.edit:hover {
+    padding-left: 100px;
+    background: #1a2afa;
+    transition: all 0.5s;
+}
+.head img {
+ float: left;
+    width: 180px;
+    height: 150px;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 10px;
+}

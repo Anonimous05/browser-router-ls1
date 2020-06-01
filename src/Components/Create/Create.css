@@ -1,0 +1,55 @@
+.container3 {
+    background: #222c84;
+    height: 575px;
+    padding-top: 70px;
+}
+.container3 p {
+    text-align: center;
+    color: white;
+    line-height: 80px;
+    margin: 0px;
+    padding-right: 40px;
+    font-size: 20px;
+    font-family: monospace;
+}
+.create {
+    height: 40px;
+    width: 200px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+    cursor: pointer;
+}
+.cancel {
+    height: 40px;
+    width: 200px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+    margin-left: 300px;
+    cursor: pointer;
+}
+.delete {
+    height: 40px;
+    width: 100px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-family: monospace;
+    font-size: 20px;
+    margin-left: 90%;
+    cursor: pointer;
+}
+.create:hover , .cancel:hover {
+    background: white;
+    color: #222c84;
+    transition: all 0.5s;
+}
+.delete:hover {
+ background: black;
+    transition: all 0.5s;
+}
