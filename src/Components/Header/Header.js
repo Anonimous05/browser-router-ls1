@@ -11,7 +11,7 @@ const Header = () => {
                     <li><a href="/">Главная</a></li>
                 </ul>
             </nav>
-            <NavLink to="/add" className="add_button">+</NavLink>
+            <NavLink to="/add" className="add_button">Add new Product</NavLink>
         </header>
     );
 };
