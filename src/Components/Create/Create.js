@@ -27,19 +27,19 @@ class Create extends Component {
                 price: this.state.createPrice,
                 productName: this.state.createName,
             };
-            await axiosAPI.put(this.props.match.params.id + '.json', object);
+            await axiosAPI.put('/products/' + this.props.match.params.id + '.json', object);
             this.props.history.push('/');
         }
     };
 
     async componentDidMount() {
-        const response = await axiosAPI.get(this.props.match.params.id + '.json');
+        const response = await axiosAPI.get(this.props.match.params.id + '/products/.json');
         this.setState({products: response.data});
     };
 
 
     deleteHandler = async () => {
-      await axiosAPI.delete(this.props.match.params.id + '.json');
+      await axiosAPI.delete('/products/' + this.props.match.params.id + '.json');
       this.props.history.push('/');
     };
 
@@ -53,11 +53,9 @@ class Create extends Component {
 
                 <button className="delete" onClick={this.deleteHandler}>Delete</button>
                 <p>Редактировать имя товара:</p>
-                <input className="in-1" type="text" name="createName" onChange={this.inputValHandler}
-                       placeholder={this.state.products.productName}/>
+                <input className="in-1" type="text" name="createName" onChange={this.inputValHandler}/>
                       <p>Редактировать цену товара:</p>
-                       <input className="in-2" type="text" name="createPrice" onChange={this.inputValHandler}
-                       placeholder={this.state.products.price}/>
+                       <input className="in-2" type="text" name="createPrice" onChange={this.inputValHandler}/>
                 <p>Редактировать фото товара:</p>
                        <input className="in-3" type="text" name="createImage" onChange={this.inputValHandler}/>
                        <div className="btns">

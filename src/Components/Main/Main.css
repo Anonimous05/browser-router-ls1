@@ -3,6 +3,7 @@
     background: #1a2afa;
     position: fixed;
     width: 100%;
+    display: flex;
 }
 .main-nav ul {
     list-style: none;
@@ -24,18 +25,20 @@
 
 .add_button {
     background: transparent;
-    border: 2px solid white;
-    border-radius: 6px;
     color: white;
     font-family: monospace;
     font-size: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
     cursor: pointer;
-    margin-left:68%;
+    margin-left:70.1%;
 }
 .add_button:hover {
-    background: white;
-    color: #1a2afa;
-    transition: all 0.5s;
+    background: #282c34;
+    transition: all 0.3s;
+}
+.add_button img {
+    width: 40px;
 }
 .products {
     padding-top: 50px;
@@ -78,15 +81,30 @@
     padding-right: 20px;
 }
 .edit:hover {
-    padding-left: 100px;
+    padding-left: 30px;
     background: #1a2afa;
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
-.head img {
+.logo {
  float: left;
     width: 180px;
     height: 150px;
     position: absolute;
     margin-top: -50px;
     margin-left: 10px;
+}
+.delete3 {
+    background: #282c34;
+    color: white;
+    text-decoration: none;
+    font-family: monospace;
+    will-change: auto;
+    margin-left: 80px;
+    border: 0px;
+    cursor: pointer;
+}
+.delete3:hover {
+    padding-left: 30px;
+    background: #222c8a;
+    transition: all 0.2s;
 }

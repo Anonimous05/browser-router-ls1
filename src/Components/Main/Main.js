@@ -8,15 +8,29 @@ class Main extends Component {
 
     state = {
         products:[],
+        productImage:'',
+        price: '',
+        productName:'',
+        all:[],
     };
 
 
     async componentDidMount(){
-      const response = await axiosAPI.get( '.json');
+      const response = await axiosAPI.get( '/products/.json');
       this.setState({products: response.data});
     };
 
-    render() {
+    addHandler2 = async (id,productImage,price,productName) => {
+        const object = {
+            productImage: productImage,
+            productName:productName,
+            price:price,
+        };
+            await axiosAPI.post( '/korzina/.json',object);
+            this.props.history.push('/')
+        };
+
+        render() {
         return (
             <div className="container">
                 <div className="products">
@@ -28,6 +42,9 @@ class Main extends Component {
                             <p className="name">Имя: {this.state.products[info].productName}</p>
                             <p className="price">Цена: {this.state.products[info].price} сом</p>
                             <NavLink className="edit" to={`/create/${info}`}>Edit</NavLink>
+                            <button className="delete3" onClick={() => this.addHandler2(info,this.state.products[info].productName,
+                                this.state.products[info].productImage,
+                                this.state.products[info].price)}>в корзину</button>
                         </div>
                     ))}
                 </div>

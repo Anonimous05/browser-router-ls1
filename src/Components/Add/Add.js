@@ -26,7 +26,7 @@ class Add extends Component {
                 price: this.state.price,
                 productName: this.state.productName
             };
-            await axiosAPI.post('.json', object);
+            await axiosAPI.post('/products/.json', object);
             this.props.history.push('/');
         }
     };
